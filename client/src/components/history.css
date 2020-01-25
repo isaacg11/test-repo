@@ -1,0 +1,12 @@
+.history-container {
+    margin: 20px 20px;
+}
+
+.history-table {
+    width: 100%;
+}
+
+.history-table th, .history-table td {
+    padding: 20px 20px;
+    border-top: 1px solid var(--gray);
+}
