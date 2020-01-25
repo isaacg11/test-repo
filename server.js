@@ -15,6 +15,7 @@ const moves = require('./api/moves');
 
 // app middleware
 app.use(bodyParser.json({ limit: '10mb' }));
+app.use(express.static(path.join(__dirname + '/client/build')));
 
 // API v.1.0
 app.use('/api/v1/moves', moves);
