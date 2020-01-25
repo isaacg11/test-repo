@@ -16,6 +16,7 @@ const moves = require('./api/moves');
 
 // app middleware
 app.use(bodyParser.json({ limit: '10mb' }));
+app.use(express.static('build'));
 app.use(cors());
 
 // API v.1.0
