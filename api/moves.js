@@ -7,7 +7,7 @@ const calculateSquare = require('../services/squares');
 const { validation } = require('../middleware/index');
 
 router.post('/', validation, (req, res) => {
-    let firstMoves = calculateNextMoves(req.query.square);
+    let firstMoves = calculateNextMoves(req.body.square);
     let firstSquares = [];
     firstMoves.forEach((m1) => {
         firstSquares.push(calculateSquare(m1));
@@ -26,7 +26,7 @@ router.post('/', validation, (req, res) => {
     })
 
     let newMove = new Move();
-    newMove.start = req.query.square;
+    newMove.start = req.body.square;
     newMove.moves = secondSquares;
     newMove.save((err) => {
         if(err) res.sendStatus(500);

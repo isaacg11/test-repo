@@ -60,6 +60,7 @@ class Game extends Component {
       <div>
         <Navbar />
         
+        {/* game start */}
         <div className="toolbar center">
           <h1>Play Game</h1>
           <button 
@@ -86,6 +87,8 @@ class Game extends Component {
             </div>
           ))}
         </span>
+        {/* game end */}
+
       </div>
     )
   }

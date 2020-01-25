@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export async function createMove(position) {
     try {
-        const response = await axios.post(`/api/v1/moves?square=${position}`);
+        const response = await axios.post(`/api/v1/moves`, {square: position});
         return response;
     }
 

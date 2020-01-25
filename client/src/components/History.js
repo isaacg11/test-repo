@@ -20,6 +20,7 @@ class History extends Component {
             <div>
                 <Navbar />
                 
+                {/* history start */}
                 <div className="history-container">
                     <h1>Move History</h1>
                     <table className="history-table center">
@@ -39,6 +40,8 @@ class History extends Component {
                         </tbody>
                     </table>
                 </div>
+                {/* history end */}
+
             </div>
         )
     }
